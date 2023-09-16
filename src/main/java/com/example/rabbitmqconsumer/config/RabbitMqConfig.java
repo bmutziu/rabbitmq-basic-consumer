@@ -70,7 +70,7 @@ public class RabbitMqConfig {
         SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
         factory.setConnectionFactory(connectionFactory);
         factory.setMessageConverter(messageConverter(objectMapper));
-//        factory.setAcknowledgeMode(AcknowledgeMode.AUTO); //by default set to AUTO
+        factory.setAcknowledgeMode(AcknowledgeMode.NONE); //by default set to AUTO
         return factory;
     }
 }
